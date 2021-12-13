@@ -14,12 +14,12 @@ void pause() {
     p1.hp = p1.hp + 10;
     p1.xp -= 5;
   }
- 
+
   if (AGL.clicked && p1.xp >= 5 && p1.speed < 5) {
     p1.speed += 0.5;
     p1.xp -= 5;
   }
- 
+
   if (DMG.clicked && p1.xp >= 5) {
     p1.damage = p1.damage + 2;
     p1.xp -= 5;
@@ -30,7 +30,12 @@ void pause() {
   fill(white);
   text("EXP: " + p1.xp, width*0.2, height*0.1, 150, 100);
   text("HP: " + p1.hpMax, width*0.2, height*0.3, 150, 100);
-  text("AGL: " + p1.speed, width*0.22, height*0.6, 150, 100);
+  if ( p1.speed >= 5) {
+    text("AGL: " + p1.speed, width*0.22, height*0.6, 150, 100);
+    text("MAXED!", width*0.7, height*0.6, 150, 100);
+  } else {
+    text("AGL: " + p1.speed, width*0.22, height*0.6, 150, 100);
+  }
   text("DMG: " + p1.damage, width*0.2, height*0.9, 150, 100);
 
 

@@ -53,6 +53,7 @@ class Enemy extends GameObject {
           myOb.hp--;
           hp=hp-25;
           if (hp <= 0) {
+            OBJ.add(new Message(p1.roomX, p1.roomY, loc.x, loc.y, 180));
             OBJ.add(new Loot(loc.x, loc.y, roomX, roomY));
             p1.xp += xp;
           }

@@ -87,6 +87,7 @@ ArrayList<DarkCell> DC;
 Player p1;
 Enemy myEnemy;
 NightStalker myNightStalker;
+Message myMessage;
 
 //Darckcell size
 int CellSize;
