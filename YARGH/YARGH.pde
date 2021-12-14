@@ -134,8 +134,6 @@ void setup() {
   //myObjects
   OBJ = new ArrayList<GameObject>();
   OBJ.add(p1);
-  OBJ.add(myEnemy);
-  OBJ.add(myNightStalker);
 
   //Create DarkGrid
   rectMode(CORNER);

@@ -1,4 +1,4 @@
-private class GameObject {
+class GameObject {
   int hp, hpMax;
   PVector loc;
   PVector vel;
@@ -35,7 +35,7 @@ private class GameObject {
 
   boolean CollidingWith(GameObject OBJ) {
     float d = dist(OBJ.loc.x, OBJ.loc.y, loc.x, loc.y);
-    if (RoomWith(OBJ) && d <= OBJ.size + size) {
+    if (RoomWith(OBJ) && d <= OBJ.size/2 + size/2) {
       return true;
     } else
       return false;

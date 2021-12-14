@@ -14,7 +14,7 @@ class Player extends GameObject {
     myWeapon = new Weapon();
     currentAct = manUp;
     ArrayList <Weapon> myWeapon;
-    size = 60;
+    size = 50;
   }
 
   //Player(int x, int y) {
@@ -31,6 +31,7 @@ class Player extends GameObject {
   //}
 
   void show() {
+    circle(loc.x, loc.y, size);
     currentAct.show(loc.x, loc.y, size/1.5, size);
   }
 
