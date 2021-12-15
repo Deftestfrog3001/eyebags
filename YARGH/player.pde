@@ -30,9 +30,18 @@ class Player extends GameObject {
   //  ArrayList <Weapon> myWeapon;
   //}
 
-  void show() {
-    circle(loc.x, loc.y, size);
+    void show() {
+    //circle(loc.x, loc.y, size);
     currentAct.show(loc.x, loc.y, size/1.5, size);
+    textSize(20);
+    if (hp >= hpMax*2/3) {
+      fill(green);
+    } else if (hp >= hpMax*1/3) { 
+      fill(yellow);
+    } else if (hp >= hpMax*0/3) {
+      fill(red);
+    }
+    text(hp + "/" + hpMax, loc.x, loc.y - 35, 150, 100);
   }
 
   void act() {
@@ -57,7 +66,7 @@ class Player extends GameObject {
       else currentAct = manLeft;
     } 
     if ( vel.y == 0 && vel.x == 0) currentAct = manDown;
-    
+
     //exit detect
     //north
     if (northRoom != white && loc.y <= height*0.1 && loc.x >= width/2-50 && loc.x <= width/2+50) {

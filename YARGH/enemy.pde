@@ -53,7 +53,7 @@ class Enemy extends GameObject {
           hp=hp- (25 + p1.damage);
           if (hp <= 0) {
             println(myOb);
-            OBJ.add(new Message(p1.roomX, p1.roomY, loc.x, loc.y, 180, xp));
+            OBJ.add(new Message(p1.roomX, p1.roomY, loc.x, loc.y, 180, xp, yellow));
             OBJ.add(new Loot(loc.x, loc.y, roomX, roomY));
             p1.xp += xp;
           }
